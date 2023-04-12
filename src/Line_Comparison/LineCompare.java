@@ -22,10 +22,5 @@ public class LineCompare
         //Calculating Length of a Line.
         double lengthOfLine = Math.sqrt((x2 - x1)^2 + (y2 - y1)^2);
         System.out.println("Length of a Line is:" + lengthOfLine);
-
-        //int v1 = (int)(Math.pow((x2 - x1),2));
-        //int v2 = (int)(Math.pow((y2 - y1),2));
-
-        //int lengthOfLine = (int)Math.sqrt(v1 + v2);
     }
 }
