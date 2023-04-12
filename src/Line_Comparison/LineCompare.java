@@ -19,8 +19,31 @@ public class LineCompare
         System.out.println("Enter Y2 Point Value of Y-Coordinate:");
         int y2 = in.nextInt();
 
-        //Calculating Length of a Line.
-        double lengthOfLine = Math.sqrt((x2 - x1)^2 + (y2 - y1)^2);
-        System.out.println("Length of a Line is:" + lengthOfLine);
+        //Taking Inputs For Line 2.
+        System.out.println("Enter X3 Point Value of X-Coordinate:");
+        int x3 = in.nextInt();
+        System.out.println("Enter Y3 Point Value of Y-Coordinate:");
+        int y3 = in.nextInt();
+        System.out.println("Enter X4 Point Value of X-Coordinate:");
+        int x4 = in.nextInt();
+        System.out.println("Enter Y4 Point Value of Y-Coordinate:");
+        int y4 = in.nextInt();
+
+        //Checking Equality of Two Lines.
+        double lengthOfLine_1 = Math.sqrt((x2 - x1)^2 + (y2 - y1)^2);
+        System.out.println("Length of a Line1 is:" + lengthOfLine_1);
+
+        double lengthOfLine_2 = Math.sqrt((x4 - x3)^2 + (y4 - y3)^2);
+        System.out.println("Length of a Line2 is:" + lengthOfLine_2);
+
+        //Checking Equality of Two Lines.
+        if (lengthOfLine_1 == lengthOfLine_2)
+        {
+            System.out.println("Length of Line1 and Line2 are Equal");
+        }
+        else
+        {
+            System.out.println("Length of Line1 and Line2 are Not Equal");
+        }
     }
 }
