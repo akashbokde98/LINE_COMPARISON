@@ -3,6 +3,7 @@ import javax.sound.sampled.Line;
 import java.util.Scanner;
 import java.lang.Math;
 
+
 public class LineCompare
 {
     Scanner in = new Scanner(System.in);
@@ -28,7 +29,6 @@ public class LineCompare
     //Calculating Length Of Line2.
     public double lengthOfLine2()
     {
-
         //Taking Inputs For Line 2.
         System.out.println("Enter X3 Point Value of X-Coordinate:");
         int x3 = in.nextInt();
@@ -46,25 +46,24 @@ public class LineCompare
         return lengthOfLine_2;
     }
     //Comparing Length of Line1 and Line2.
-    public void equalityOfLines(double lengthOfLine_1, double lengthOfLine_2)
+    public void compareTwoLines(double lengthOfLine1, double lengthOfLine2)
     {
         //Converting double to String type.
-        String l1 = String.valueOf(lengthOfLine_1);
-        String l2 = String.valueOf(lengthOfLine_2);
+        String l1 = String.valueOf(lengthOfLine1);
+        String l2 = String.valueOf(lengthOfLine2);
 
         //Checking Equality of Two Lines By Using Equals Method.
-        if (l1.equals(l2))
+        if (l1.compareTo(l2) > 0)
         {
-            System.out.println("Length of Line1 and Line2 are Equal");
+            System.out.println("Length of Line1 is Greater than Line2");
         }
-        //Comparing Lines Greater or Less.
-        else if (lengthOfLine_1 > lengthOfLine_2)
+        else if (l1.compareTo(l2) < 0)
         {
-            System.out.println("Length of Line1 is Greater than Line2.");
+            System.out.println("Length of Line2 is Greater Than Line1");
         }
         else
         {
-            System.out.println("Length of Line2 is Greater than line1.");
+            System.out.println("Length of Line1 and Line2 Both Are Equal");
         }
     }
     public static void main(String[] args)
@@ -74,6 +73,7 @@ public class LineCompare
         LineCompare obj = new LineCompare();
         double lengthOfLine1 = obj.lengthOfLine1();
         double lengthOfLine2 = obj.lengthOfLine2();
-        obj.equalityOfLines(lengthOfLine1, lengthOfLine2);
+        obj.compareTwoLines(lengthOfLine1, lengthOfLine2);
+
     }
 }
